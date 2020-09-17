@@ -11,9 +11,9 @@ int main(void)
 	int x;
 
 	do {
-		for (x = 'z'; x <= 'z'; x--)
+		for (x = 'z'; x >= 'a'; x--)
 			putchar(x);
-	} while (x < 'a');
+	} while (x > 'a');
 	putchar('\n');
 	return (0);
 }
