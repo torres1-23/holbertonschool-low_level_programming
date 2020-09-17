@@ -1,0 +1,3 @@
+# ignore temporary emacs files
+*~
+*.out
