@@ -15,9 +15,9 @@ int main(void)
 			putchar(x + 48);
 	} while (x < 9);
 	do {
-		for (x = 'a'; x <= 'f'; x++)
-			putchar(x);
-	} while (x < 'f');
+		for (x = 0x0; x <= 0xF; x++)
+			putchar(x + 48);
+	} while (x < 0xf);
 	putchar('\n');
 	return (0);
 }
