@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point, prints the dictionary in lowercase
+ * main - Entry point, prints the number from 00 to 99 separated by a comma
  *
  * Return: Always 0 (Success)
  */

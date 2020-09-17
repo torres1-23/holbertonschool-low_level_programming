@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point, prints the dictionary in lowercase
+ * main - Entry point, prints the dictionary without q and e
  *
  * Return: Always 0 (Success)
  */
