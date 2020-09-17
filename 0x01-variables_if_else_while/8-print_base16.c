@@ -11,13 +11,9 @@ int main(void)
 	int x;
 
 	do {
-		for (x = 0; x <= 9; x++)
-			putchar(x + 48);
-	} while (x < 9);
-	do {
-		for (x = 0; x <= 5; x++)
+		for (x = 0x0; x <= 0xf; x++)
 			putchar(x + 97);
-	} while (x < 5);
+	} while (x < 0xf);
 	putchar('\n');
 	return (0);
 }
