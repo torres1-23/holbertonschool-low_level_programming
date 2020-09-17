@@ -12,7 +12,7 @@ int main(void)
 
 	do {
 		for (x = 0; x <= 9; x++)
-			putchar(x+48);
+			putchar(x + 48);
 	} while (x < 9);
 	do {
 		for (x = 'a'; x <= 'f'; x++)
