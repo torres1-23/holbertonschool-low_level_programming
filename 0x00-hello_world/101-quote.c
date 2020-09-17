@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * main - Entry point
+ * main - Entry point, write string to stderr
  *
  * Return: Always 1 (Error)
  */
