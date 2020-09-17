@@ -11,9 +11,9 @@ int main(void)
 	int x;
 
 	do {
-		for (x = ; x <= 9; x++)
-			print(x);
+		for (x = 0; x <= 9; x++)
+			printf("%d", x);
 	} while (x < 9);
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
