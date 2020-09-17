@@ -13,8 +13,8 @@ int main(void)
 	do {
 		for (x = 0; x <= 99; x++)
 		{
-			putchar(x/10 + 48);
-			putchar(x%10 + 48);
+			putchar(x / 10 + 48);
+			putchar(x % 10 + 48);
 			if (x != 99)
 			{
 				putchar(',');
