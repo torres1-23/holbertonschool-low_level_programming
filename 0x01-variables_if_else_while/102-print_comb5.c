@@ -23,14 +23,14 @@ int main(void)
 			e = d / 10;
 			f = d % 10;
 
-			if (b < e || (b == b && c < f))
+			if (b < e || (b == e && c < f))
 			{
 				putchar(b + 48);
 				putchar(c + 48);
 				putchar(32);
 				putchar(e + 48);
 				putchar(f + 48);
-				if (!(e == 9 && f == 8))
+				if (!(b == 9 && c == 8))
 				{
 					putchar(44);
 					putchar(32);
