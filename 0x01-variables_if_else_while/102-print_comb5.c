@@ -1,36 +1,45 @@
 #include <stdio.h>
-
 /**
- * main - Entry point, prints the number from 00 to 99 separated by a comma
- *
- * Return: Always 0 (Success)
+ * main - entry point, print two numbers of two digits
+ * 
+ * Return: 0
  */
-
 int main(void)
 {
-	int x;
 	int a;
 	int b;
+	int c;
+	int d; 
+	int e;
+	int f;
+	int g;
 
-	for (x = 0; x <= 9; x++)
+	for (a = 0; a < 100; a++)
 	{
-		for (a = 0; a <= 9; a++)
+		b= a / 10;
+		c = a % 10;
+
+		for (d = 0; d < 100; d++)
 		{
-			for (b = a + 1; b <= 9; b++)
+			e = d / 10;
+			f = d % 10;
+
+			if (b < e || (b == b && c < f))
 			{
-				if (x < a)
+				putchar(b + 48);
+				putchar(c + 48);
+				putchar(32);
+				putchar(e + 48);
+				putchar(f + 48);
+				if (!(e == 9 && f == 8))
 				{
-					putchar(x + 48);
-					putchar(x + 48);
-					putchar(32);
-					putchar(a + 48);
-					putchar(b + 48);
 					putchar(44);
 					putchar(32);
 				}
 			}
 		}
 	}
-	putchar(10);
+	putchar('\n');
+
 	return (0);
 }
