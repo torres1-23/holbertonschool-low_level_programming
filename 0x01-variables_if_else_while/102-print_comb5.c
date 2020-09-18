@@ -21,7 +21,7 @@ int main(void)
 			{
 				for (b = y + 1; b <= 9; b++)
 				{
-					if (x < a)
+					if (x > a)
 					{	
 						putchar(x + 48);
 						putchar(y + 48);
