@@ -22,7 +22,7 @@ int main(void)
 				putchar(x + 48);
 				putchar(y + 48);
 				putchar(z + 48);
-				a= 100 * x + y * 10 + z;
+				a = 100 * x + y * 10 + z;
 				if (a != 789)
 				{
 					putchar(',');
