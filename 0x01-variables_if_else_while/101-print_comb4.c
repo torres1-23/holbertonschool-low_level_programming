@@ -25,12 +25,12 @@ int main(void)
 				a = 100 * x + y * 10 + z;
 				if (a != 789)
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(44);
+					putchar(32);
 				}
 			}
 		 }
 	}
-	putchar('\n');
+	putchar(10);
 	return (0);
 }
