@@ -25,7 +25,7 @@ int main(void)
 					{	
 						putchar(x + 48);
 						putchar(y + 48);
-						putchar(32)
+						putchar(32);
 						putchar(a + 48);
 						putchar(b + 48);
 						putchar(44);
