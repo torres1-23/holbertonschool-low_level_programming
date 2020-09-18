@@ -26,7 +26,7 @@ int main(void)
 				if (a != 789)
 				{
 					putchar(44);
-					putchar(0);
+					putchar(32);
 				}
 			}
 		 }
