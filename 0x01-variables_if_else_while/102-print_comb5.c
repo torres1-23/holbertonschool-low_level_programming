@@ -9,7 +9,6 @@
 int main(void)
 {
 	int x;
-	int y;
 	int a;
 	int b;
 
