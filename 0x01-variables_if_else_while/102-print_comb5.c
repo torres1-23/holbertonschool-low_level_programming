@@ -20,9 +20,9 @@ int main(void)
 			{
 				putchar(x + 48);
 				putchar(x + 48);
+				putchar(32);
 				if (x < a)
 				{
-					putchar(32);
 					putchar(a + 48);
 					putchar(b + 48);
 					putchar(44);
