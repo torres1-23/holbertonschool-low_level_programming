@@ -18,11 +18,11 @@ int main(void)
 		{
 			for (b = a + 1; b <= 9; b++)
 			{
-				putchar(x + 48);
-				putchar(x + 48);
-				putchar(32);
 				if (x < a)
 				{
+					putchar(x + 48);
+					putchar(x + 48);
+					putchar(32);
 					putchar(a + 48);
 					putchar(b + 48);
 					putchar(44);
