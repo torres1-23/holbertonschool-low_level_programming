@@ -1,9 +1,11 @@
 #include <stdio.h>
+
 /**
  * main - entry point, print two numbers of two digits
  * 
  * Return: 0
  */
+
 int main(void)
 {
 int a;
