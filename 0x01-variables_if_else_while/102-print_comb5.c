@@ -21,11 +21,14 @@ int main(void)
 			{
 				for (b = a + 1; b <= 9; b++)
 				{
-					if (x < a && y < b)
+					if (x < a)
 					{	
 						putchar(x + 48);
 						putchar(y + 48);
 						putchar(32);
+					}	
+					if (y < b)
+					{
 						putchar(a + 48);
 						putchar(b + 48);
 						putchar(44);
