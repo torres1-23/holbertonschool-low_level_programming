@@ -17,11 +17,11 @@ int main(void)
 	{
 		for (y = 0; y <= 9; y++)
 		{
-			for (a = x + 1; a <= 9; a++)
+			for (a = 0; a <= 9; a++)
 			{
-				for (b = y + 1; b <= 9; b++)
+				for (b = a + 1; b <= 9; b++)
 				{
-					if (x > a)
+					if (x < a)
 					{	
 						putchar(x + 48);
 						putchar(y + 48);
