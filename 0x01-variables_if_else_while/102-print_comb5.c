@@ -2,7 +2,7 @@
 
 /**
  * main - entry point, print two numbers of two digits
- * 
+ *
  * Return: 0
  */
 
@@ -11,7 +11,7 @@ int main(void)
 int a;
 int b;
 int c;
-int d; 
+int d;
 int e;
 int f;
 
