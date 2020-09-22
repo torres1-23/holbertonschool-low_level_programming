@@ -19,6 +19,11 @@ void times_table(void)
 			{
 				_putchar(0 + '0');
 			}
+			else if (b == 0 && c == 0 && x == 0 && y !=0)
+			{
+				_putchar(' ');
+				_putchar(x + '0');
+			}
 			else if (b == 0 && c != 0)
 			{
 				_putchar(' ');
