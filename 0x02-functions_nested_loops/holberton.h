@@ -97,9 +97,10 @@ int add(int, int);
 void print_to_98(int n);
 
 /**
- * times_table - prints the n times table
+ * print_times_table - prints the n times table
  * @n: number passed
  */
 
-void times_table(int n);
+void print_times_table(int n);
+
 #endif /* _HOLBERTON_H_ */
