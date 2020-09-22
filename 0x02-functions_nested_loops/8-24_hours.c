@@ -19,11 +19,11 @@ void jack_bauer(void)
 					a = h1 * 10 + h2;
 					if (a < 24)
 					{
-						_putchar(h1+48);
-						_putchar(h2+48);
+						_putchar(h1 + 48);
+						_putchar(h2 + 48);
 						_putchar(':');
-						_putchar(m1+48);
-						_putchar(m2+48);
+						_putchar(m1 + 48);
+						_putchar(m2 + 48);
 						_putchar('\n');
 					}
 					else
