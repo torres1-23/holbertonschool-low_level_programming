@@ -6,6 +6,19 @@
  *
  */
 
+void last(int, int);
+
+void last (int x, int n)
+{
+	if (x == n)
+		_putchar('\n');
+	else
+	{
+		_putchar(',');
+		_putchar(' ');
+	}
+}
+
 void print_times_table(int n)
 {
 	int x, a, b, c, y, d;
@@ -44,13 +57,7 @@ void print_times_table(int n)
 					_putchar(c + '0');
 					_putchar(d + '0');
 				}
-				if (x == n)
-					_putchar('\n');
-				else
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
+				last(x, n);
 			}
 		}
 	}
