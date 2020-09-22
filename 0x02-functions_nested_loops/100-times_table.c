@@ -17,8 +17,8 @@ void print_times_table(int n)
 			for (x = 0; x <= n; x++)
 			{
 				a = y * x;
-				d = a / 100;
-				b = a / 10;
+				d = a / 10;
+				b = d / 10;
 				c = a % 10;
 				if (x == 0)
 				{
