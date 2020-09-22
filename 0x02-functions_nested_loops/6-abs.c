@@ -13,7 +13,9 @@ int _abs(int a)
 {
 	int n;
 
-	n = _abs(a);
-	n = n % 10;
+	if (n < 0)
+		n = -1 * a;
+	else
+		n = a;
 	return (n);
 }
