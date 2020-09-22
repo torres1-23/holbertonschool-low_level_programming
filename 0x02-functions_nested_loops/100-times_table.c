@@ -2,8 +2,8 @@
 
 /**
  * last - last format of lines
- * @int: integer passed
- * @int: integer passes
+ * @x: integer passed
+ * @n: integer passes
  *
  */
 
