@@ -103,4 +103,12 @@ void print_to_98(int n);
 
 void print_times_table(int n);
 
+/**
+ * last- last format of lines
+ * @int: integer passed
+ * @int: integer passes
+ */
+
+void last(int, int);
+
 #endif /* _HOLBERTON_H_ */
