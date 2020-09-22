@@ -16,42 +16,32 @@ void print_times_table(int n)
 		{
 			for (x = 0; x <= n; x++)
 			{
-				a = y * x;
-				d = a / 100;
-				if (a > 99)
-					b = (a - 100) / 10;
-				else
-					b = a / 10;
-				c = a % 10;
-				if (x == 0)
+				a = y + x;
+				d = a % 10;
+				if (a < 9)
 				{
-					_putchar(0 + '0');
+					if (a != 0)
+						_putchar(0 + '0');
+					else
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(d + '0');
 				}
-				else if (d == 0 && b == 0 && x != 0)
+				else if (a < 99)
 				{
-					_putchar(' ');
+					c = a / 10;
 					_putchar(' ');
 					_putchar(c + '0');
-				}
-				else if (d == 0 && b != 0 && x != 0)
-				{
-					_putchar(' ');
-					_putchar(b + '0');
-					_putchar(c + '0');
-				}
-				else
-				{
 					_putchar(d + '0');
-					_putchar(b + '0');
-					_putchar(c + '0');
-				}
-				if (x != n)
-				{
-					_putchar(',');
-					_putchar(' ');
 				}
 				else
-					_putchar('\n');
+				{
+					b = a / 100;
+					c = (a - 100) / 10;
+					_putchar(b + '0');
+					_putchar(c + '0');
+					_putchar(d + '0');
+				}
 			}
 		}
 	}
