@@ -15,7 +15,7 @@ void times_table(void)
 			a = y * x;
 			b = a / 10;
 			c = a % 10;
-			if (b == 0 && c == 0 && y == 0 && x == 0)
+			if (b == 0 && c == 0 && y == 0)
 			{
 				_putchar(0 + '0');
 			}
