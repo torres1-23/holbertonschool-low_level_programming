@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * print_times_table - prints the n times table
- * @n: integer passed
- *
+ * last- last format of lines
+ * @int: integer passed
+ * @int: integer passes
  */
 
 void last(int, int);
@@ -18,6 +18,12 @@ void last (int x, int n)
 		_putchar(' ');
 	}
 }
+
+/**
+ * print_times_table - prints the n times table
+ * @n: integer passed
+ *
+ */
 
 void print_times_table(int n)
 {
