@@ -20,6 +20,11 @@ void times_table(void)
 				b = 32;
 				z = 0;
 			}
+			else if (b == 0 && c == 0)
+			{
+				b = 0;
+				z = 0;
+			}
 			else
 				z = 48;
 			_putchar(b + z);
