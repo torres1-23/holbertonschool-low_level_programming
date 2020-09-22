@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * last- last format of lines
+ * last - last format of lines
  * @int: integer passed
  * @int: integer passes
+ *
  */
 
 void last(int, int);
