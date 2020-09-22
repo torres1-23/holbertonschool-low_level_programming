@@ -1,4 +1,4 @@
 # ignore temporary emacs files
 *~
-*_pucthar.c
+_putchar.c
 *-main.c
