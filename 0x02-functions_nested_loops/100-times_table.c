@@ -7,9 +7,7 @@
  *
  */
 
-void last(int, int);
-
-void last (int x, int n)
+void last(int x, int n)
 {
 	if (x == n)
 		_putchar('\n');
