@@ -104,9 +104,10 @@ void print_to_98(int n);
 void print_times_table(int n);
 
 /**
- * last- last format of lines
+ * last - last format of lines
  * @int: integer passed
- * @int: integer passes
+ * @int: integer passed
+ *
  */
 
 void last(int, int);
