@@ -15,14 +15,14 @@ void times_table(void)
 			a = y * x;
 			b = a / 10;
 			c = a % 10;
-			if (b == 0)
-			{
-				b = 32;
-				z = 0;
-			}
-			else if (b == 0 && c == 0)
+			if (b == 0 && c == 0)
 			{
 				b = 0;
+				z = 0;
+			}
+			else if (b == 0 && c != 0)
+			{
+				b = 32;
 				z = 0;
 			}
 			else
