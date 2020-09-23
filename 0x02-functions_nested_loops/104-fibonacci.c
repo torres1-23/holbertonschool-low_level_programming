@@ -30,7 +30,7 @@ int main(void)
 			}
 			if (n <= 93 && n > 2)
 				printf("%lu, ", num2);
-			else if (n > 50 && n < 98)
+			else if (n > 50 && n < 97)
 				printf("%lu%lu, ", prim, sec);
 			else
 				printf("%lu%lu\n", prim, sec);
