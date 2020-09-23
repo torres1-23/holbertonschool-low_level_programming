@@ -25,7 +25,7 @@ int main(void)
 			printf("%lu, ", num2);
 		}
 		else
-			printf("%lu\n", num2+num2);
+			printf("%lu\n", num2 + num2);
 	}
 	return (0);
 }
