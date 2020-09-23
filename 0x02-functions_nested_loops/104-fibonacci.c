@@ -12,7 +12,7 @@ int main(void)
 	unsigned long num, num1;
 	int n;
 
-	for (n = 1; n <= 98; n++)
+	for (n = 0; n <= 98; n++)
 	{
 		num = 1;
 		num1 = 2;
