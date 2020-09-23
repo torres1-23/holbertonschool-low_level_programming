@@ -25,7 +25,7 @@ int main(void)
 			if (n < 98)
 				printf("%lu, ", num2);
 			else
-				printf("%lu\n", num + num1);
+				printf("%lu\n", num2);
 		}
 	}
 	return (0);
