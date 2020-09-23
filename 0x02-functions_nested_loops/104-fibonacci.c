@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	double num = 0, num1 = 0, num2 = 1;
+	unsigned long num = 0, num1 = 0, num2 = 1;
 	int n;
 
 	for (n = 1; n <= 98; n++)
@@ -17,9 +17,9 @@ int main(void)
 		num1 = num2;
 		num2 = num;
 		if (n != 98)
-			printf("%.0lf, ", num);
+			printf("%lu, ", num);
 		else
-			printf("%.0lf\n", num);
+			printf("%lu\n", num);
 	}
 	return (0);
 }
