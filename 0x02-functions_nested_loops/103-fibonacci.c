@@ -14,7 +14,7 @@ int main(void)
 	{
 		num = num1 + num2;
 		num1 = num2;
-	        num2 = num;
+		num2 = num;
 		if (num % 2 == 0)
 			sum = num + sum;
 	}
