@@ -19,10 +19,10 @@ int main(void)
 		num2 = num;
 		printf("%ld, ", num);
 	}
-	part11 = num2 / 10000;
-	part12 = num2 % 10000;
-	part21 = num / 10000;
-	part22 = num % 10000;
+	part11 = num1 / 10000;
+	part12 = num1 % 10000;
+	part21 = num2 / 10000;
+	part22 = num2 % 10000;
 	for (n = 1; n <= 47; n++)
 	{
 		ult = (part12 + part22) % 10000;
