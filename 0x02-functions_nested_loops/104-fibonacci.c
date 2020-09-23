@@ -23,6 +23,7 @@ int main(void)
 			num2 = num + num1;
 			num = num1;
 			num1 = num2;
+		}
 		else
 		{	
 			prim = num2 / 100000;
