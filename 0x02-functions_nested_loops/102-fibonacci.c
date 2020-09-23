@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int num = 0, num1 = 0, num2 = 1;
+	long num = 0, num1 = 0, num2 = 1;
 	int n;
 
 	for (n = 1; n <= 50; n++)
@@ -17,9 +17,9 @@ int main(void)
 		num1 = num2;
 		num2 = num;
 		if (n != 50)
-			printf("%d, ", num);
+			printf("%ld, ", num);
 		else
-			printf("%d\n", num);
+			printf("%ld\n", num);
 	}
 	return (0);
 }
