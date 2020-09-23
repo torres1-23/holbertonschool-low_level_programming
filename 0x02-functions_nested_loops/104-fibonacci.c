@@ -17,15 +17,16 @@ int main(void)
 			printf("%lu, ", num);
 		else if (n == 2)
 			printf("%lu, ", num1);
-		else if (n < 98)
+		else
 		{
 			num2 = num + num1;
 			num = num1;
 			num1 = num2;
-			printf("%lu, ", num2);
+			if (n < 98)
+				printf("%lu, ", num2);
+			else
+				printf("%lu\n", num + num1);
 		}
-		else
-			printf("%lu\n", num + num1);
 	}
 	return (0);
 }
