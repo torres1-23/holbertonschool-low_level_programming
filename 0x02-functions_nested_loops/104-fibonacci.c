@@ -8,20 +8,17 @@
 
 int main(void)
 {
-	unsigned long num = 0, num1 = 1, num2 = 2;
+	unsigned long num2 = 0;
+	unsigned long num, num1;
 	int n;
 
 	for (n = 1; n <= 98; n++)
 	{
-		if (n == 1)
-			printf("1, ");
-		if (n == 2)
-			printf("2, ");
 		else
 		{
-			num = num1 + num2;
-			num1 = num2;
-			num2 = num;
+			num = 1;
+			num1 = 2;
+			num2 = num + num1;
 		}
 		if (n != 98)
 			printf("%lu, ", num);
