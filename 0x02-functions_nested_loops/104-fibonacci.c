@@ -12,7 +12,7 @@ int main(void)
 	unsigned long num, part11, part12, part21, part22, ult, prim, sumult;
 	int n;
 
-	for (n = 0; n < 51; n++)
+	for (n = 0; n < 91; n++)
 	{
 		num = num1 + num2;
 		num1 = num2;
@@ -23,7 +23,7 @@ int main(void)
 	part12 = num1 % 10000;
 	part21 = num2 / 10000;
 	part22 = num2 % 10000;
-	for (n = 0; n < 46; n++)
+	for (n = 0; n < 7; n++)
 	{
 		sumult = part12 + part22;
 		ult = sumult % 10000;
