@@ -14,9 +14,9 @@ int main(void)
 
 	for (n = 0; n <= 97; n++)
 	{
-		if (n == 1)
+		if (n == 0)
 			printf("%lu, ", num);
-		else if (n == 2)
+		else if (n == 1)
 			printf("%lu, ", num1);
 		else
 		{
