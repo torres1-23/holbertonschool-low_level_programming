@@ -23,7 +23,7 @@ int main(void)
 			num2 = num + num1;
 			num = num1;
 			num1 = num2;
-			if ( n > 50)
+			if (n > 50)
 			{
 				prim = num2 / 1000000;
 				sec = num2 % 1000000;
