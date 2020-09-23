@@ -23,9 +23,14 @@ int main(void)
 			num2 = num + num1;
 			num = num1;
 			num1 = num2;
-			if (n > 93 && n <= 97)
+			if (n > 93 && n <= 96)
 			{
-				prim = num2 / 100000000000;
+				prim = num2 / 10000000000;
+				sec = num2 % 10000000000;
+			}
+			if(n == 97)
+			{
+				prim = num2 / 10000000000;
 				sec = num2 % 100000000000;
 			}
 			if (n <= 93 && n > 2)
