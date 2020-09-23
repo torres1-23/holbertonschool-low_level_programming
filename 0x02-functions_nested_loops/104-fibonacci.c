@@ -35,7 +35,7 @@ int main(void)
 			printf("%lu%lu, ", prim, sec);
 		}	
 		else
-			printf("%lu\n", prim, sec);
+			printf("%lu%lu\n", prim, sec);
 	}
 	return (0);
 }
