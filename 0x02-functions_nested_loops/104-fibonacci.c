@@ -18,16 +18,16 @@ int main(void)
 			printf("%lu, ", num);
 		else if (n == 2)
 			printf("%lu, ", num1);
-		else if (n <= 50)
+		else
 		{
 			num2 = num + num1;
 			num = num1;
 			num1 = num2;
-		}
-		else
-		{	
-			prim = num2 / 1000000;
-			sec = num2 % 1000000;
+			if (n > 50 && n < 98)
+			{	
+				prim = num2 / 1000000;
+				sec = num2 % 1000000;
+			}
 		}
 		if (n <= 50 && n > 2)
 			printf("%lu, ", num2);
