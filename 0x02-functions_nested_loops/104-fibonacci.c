@@ -28,7 +28,7 @@ int main(void)
 				prim = num2 / 10000000000;
 				sec = num2 % 10000000000;
 			}
-			if(n == 97)
+			if (n == 97)
 			{
 				prim = num2 / 10000000000;
 				sec = num2 % 100000000000;
