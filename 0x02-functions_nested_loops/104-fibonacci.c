@@ -16,7 +16,7 @@ int main(void)
 		num = num1 + num2;
 		num1 = num2;
 		num2 = num;
-		if (n != 50)
+		if (n != 98)
 			printf("%lg, ", num);
 		else
 			printf("%lg\n", num);
