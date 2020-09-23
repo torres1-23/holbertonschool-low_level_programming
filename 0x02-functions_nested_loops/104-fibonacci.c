@@ -26,8 +26,8 @@ int main(void)
 		}
 		else
 		{	
-			prim = num2 / 100000;
-			sec = num2 % 100000;
+			prim = num2 / 1000000;
+			sec = num2 % 1000000;
 		}
 		if (n <= 50 && n > 2)
 			printf("%lu, ", num2);
