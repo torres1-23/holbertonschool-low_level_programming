@@ -29,11 +29,9 @@ int main(void)
 				sec = num2 % 1000000;
 			}
 			if (n <= 50 && n > 2)
-			printf("%lu, ", num2);
+				printf("%lu, ", num2);
 			else if (n > 50 && n < 98)
-			{
 				printf("%lu%lu, ", prim, sec);
-			}
 			else
 				printf("%lu%lu\n", prim, sec);
 		}
