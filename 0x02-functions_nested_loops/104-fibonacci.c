@@ -17,9 +17,9 @@ int main(void)
 		num1 = num2;
 		num2 = num;
 		if (n != 98)
-			printf("%0.lf, ", num);
+			printf("%.0lf, ", num);
 		else
-			printf("%0.lf\n", num);
+			printf("%.0lf\n", num);
 	}
 	return (0);
 }
