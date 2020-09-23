@@ -18,9 +18,9 @@ int main(void)
 		num1 = 2;
 		num2 = num + num1;
 		if (n != 98)
-			printf("%lu, ", num);
+			printf("%lu, ", num2);
 		else
-			printf("%lu\n", num);
+			printf("%lu\n", num2);
 	}
 	return (0);
 }
