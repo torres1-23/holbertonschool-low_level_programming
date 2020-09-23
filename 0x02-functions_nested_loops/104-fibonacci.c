@@ -14,12 +14,9 @@ int main(void)
 
 	for (n = 1; n <= 98; n++)
 	{
-		else
-		{
-			num = 1;
-			num1 = 2;
-			num2 = num + num1;
-		}
+		num = 1;
+		num1 = 2;
+		num2 = num + num1;
 		if (n != 98)
 			printf("%lu, ", num);
 		else
