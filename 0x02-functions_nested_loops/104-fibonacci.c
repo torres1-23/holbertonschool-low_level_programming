@@ -9,7 +9,7 @@
 int main(void)
 {
 	unsigned long num1 = 0, num2 = 1;
-	unsigned long num, part11, part12, part21, part22, ult, prim;
+	unsigned long num, part11, part12, part21, part22, ult, prim, sumult;
 	int n;
 
 	for (n = 1; n <= 50; n++)
@@ -25,8 +25,9 @@ int main(void)
 	part22 = num2 % 10000;
 	for (n = 1; n <= 47; n++)
 	{
-		ult = (part12 + part22) % 10000;
-		if (ult > 9999)
+		sumult = part12 + part22;
+		ult = sumult % 10000;
+		if (sumult > 9999)
 			prim = part11 + part21 + 1;
 		else
 			prim = part11 + part21;
