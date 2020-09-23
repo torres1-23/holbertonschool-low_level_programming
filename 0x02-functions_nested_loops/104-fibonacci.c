@@ -25,8 +25,8 @@ int main(void)
 			num1 = num2;
 			if (n > 50 && n <= 97)
 			{
-				prim = num2 / 10000000000;
-				sec = num2 % 10000000000;
+				prim = num2 / 100000000000;
+				sec = num2 % 100000000000;
 			}
 			if (n <= 50 && n > 2)
 				printf("%lu, ", num2);
