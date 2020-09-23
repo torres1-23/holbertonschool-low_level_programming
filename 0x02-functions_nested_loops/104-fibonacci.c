@@ -15,6 +15,8 @@ int main(void)
 	{
 		if (n == 1)
 			printf("1, ");
+		if (n == 2)
+			printf("2, ");
 		else
 		{
 			num = num1 + num2;
