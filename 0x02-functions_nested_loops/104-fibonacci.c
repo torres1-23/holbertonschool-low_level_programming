@@ -35,7 +35,7 @@ int main(void)
 		part12 = part22;
 		part21 = prim;
 		part22 = ult;
-		if (n != 45)
+		if (n != 6)
 			printf("%lu%lu, ", prim, ult);
 		else
 			printf("%lu%lu\n", prim, ult);
