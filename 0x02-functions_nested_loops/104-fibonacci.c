@@ -8,38 +8,36 @@
 
 int main(void)
 {
-	unsigned long num = 1, num1 = 2;
-	unsigned long num2, prim, sec;
+	unsigned long num1 = 0, num2 = 1;
+	unsigned long num, part11, part12, part21, part22, ult, prim;
 	int n;
 
-	for (n = 1; n <= 97; n++)
+	for (n = 1; n <= 50; n++)
 	{
-		if (n == 1)
-			printf("%lu, ", num);
-		else if (n == 2)
-			printf("%lu, ", num1);
+		num = num1 + num2;
+		num1 = num2;
+		num2 = num;
+		printf("%ld, ", num);
+	}
+	part11 = num1 / 10000;
+	part12 = num1 % 10000;
+	part21 = num2 / 10000;
+	part22 = num2 % 10000;
+	for (n = 1; n <= 47; n++)
+	{
+		ult = (part12 + part22) % 10000;
+		if (ult > 9999)
+			prim = part11 + part21 + 1;
 		else
-		{
-			num2 = num + num1;
-			num = num1;
-			num1 = num2;
-			if (n > 93 && n <= 96)
-			{
-				prim = num2 / 10000000000;
-				sec = num2 % 10000000000;
-			}
-			if (n == 97)
-			{
-				prim = num2 / 10000000000;
-				sec = num2 % 100000000000;
-			}
-			if (n <= 93 && n > 2)
-				printf("%lu, ", num2);
-			else if (n > 50 && n < 97)
-				printf("%lu%lu, ", prim, sec);
-			else
-				printf("%lu%lu\n", prim, sec);
-		}
+			prim = part11 + part21;
+		part11 = part21;
+		part12 = part22;
+		part21 = prim;
+		part22 = ult;
+		if (n != 47)
+			printf("%lu%lu, ", prim, ult);
+		else
+			printf("%lu%lu\n", prim, ult);
 	}
 	return (0);
 }
