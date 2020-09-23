@@ -12,7 +12,7 @@ int main(void)
 	unsigned long num2, prim, sec;
 	int n;
 
-	for (n = 1; n <= 98; n++)
+	for (n = 1; n <= 97; n++)
 	{
 		if (n == 1)
 			printf("%lu, ", num);
@@ -23,7 +23,7 @@ int main(void)
 			num2 = num + num1;
 			num = num1;
 			num1 = num2;
-			if (n > 93 && n <= 98)
+			if (n > 93 && n <= 97)
 			{
 				prim = num2 / 100000000000;
 				sec = num2 % 100000000000;
