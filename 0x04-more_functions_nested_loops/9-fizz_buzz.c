@@ -5,7 +5,7 @@
  *
  * Description: Prints the "Fizz-Buzz test"
  *
- * Returns: 0 if success
+ * Return: 0 if success
  */
 
 int main(void)
@@ -14,11 +14,11 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i % 3 == 0 && i % 5 != 0)
+		if (i % 3 == 0 && i % 5 == 0)
 			printf("FizzBuzz ");
-		else if (i % 5 == 0)
+		else if (i % 5 == 0 && i % 3 != 0)
 			printf("Buzz ");
-		else if (i % 3 == 0)
+		else if (i % 3 == 0 && i % 5 != 0)
 			printf("Fizz ");
 		else
 			printf("%d ", i);
