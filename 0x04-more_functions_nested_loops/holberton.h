@@ -85,4 +85,11 @@ void print_square(int size);
 
 void print_triangle(int size);
 
+/**
+ * print_number - print a integer with putchar
+ * @n: integer to print
+ */
+
+void print_number(int n);
+
 #endif /* _HOLBERTON_H_ */
