@@ -15,7 +15,7 @@ void print_number(int n)
 		n = -n;
 	}
 	if (n == -2147483648)
-	{	
+	{
 		_putchar('-');
 		_putchar(2 + '0');
 		_putchar(1 + '0');
@@ -28,7 +28,7 @@ void print_number(int n)
 		_putchar(4 + '0');
 		_putchar(8 + '0');
 	}
-	if (n n > -2147483647)
+	if (n > -2147483647)
 	{
 		d = n / 10;
 		if (d)
