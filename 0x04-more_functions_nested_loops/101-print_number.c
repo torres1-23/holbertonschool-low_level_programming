@@ -9,7 +9,7 @@ void print_number(int n)
 {
 	unsigned int d;
 
-	if (n < 0 && n != 2147483648)
+	if (n < 0 && n > -2147483647)
 	{
 		_putchar('-');
 		n = -n;
@@ -17,18 +17,22 @@ void print_number(int n)
 	if (n == -2147483648)
 	{	
 		_putchar('-');
-		_putchar((n / 1000000000) + '0');
-		_putchar((n / 100000000) + '0');
-		_putchar((n / 10000000) + '0');
-		_putchar((n / 1000000) + '0');
-		_putchar((n / 100000) + '0');
-		_putchar((n / 10000) + '0');
-		_putchar((n / 1000) + '0');
-		_putchar((n / 100) + '0');
+		_putchar(2 + '0');
+		_putchar(1 + '0');
+		_putchar(4 + '0');
+		_putchar(7 + '0');
+		_putchar(4 + '0');
+		_putchar(8 + '0');
+		_putchar(3 + '0');
+		_putchar(6 + '0');
+		_putchar(4 + '0');
+		_putchar(8 + '0');
+	}
+	if (n n > -2147483647)
+	{
+		d = n / 10;
+		if (d)
+			print_number(d);
 		_putchar((n % 10) + '0');
 	}
-	d = n / 10;
-	if (d)
-		print_number(d);
-	_putchar((n % 10) + '0');
 }
