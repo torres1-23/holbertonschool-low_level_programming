@@ -42,8 +42,6 @@ int _strlen(char *s);
 
 void _puts(char *str);
 
-#include "holberton.h"
-
 /**
  * print_rev - prints a string, in reverse, followed by a new line.
  * @s: string to print
@@ -57,5 +55,39 @@ void print_rev(char *s);
  */
 
 void rev_string(char *s);
+
+/**
+ * puts2 - prints every other character of a string, starting with the first
+ * character, followed by a new line
+ * @str: String to print
+ */
+
+void puts2(char *str);
+
+/**
+ * puts_half - prints half of a string, followed by a new line
+ * @str: string to print half of it
+ */
+
+void puts_half(char *str);
+
+/**
+ * print_array - void print_array(int *a, int n)
+ * @a: array to print n numbers for
+ * @n: numbers of array to print
+ */
+
+void print_array(int *a, int n);
+
+/**
+ * _strcpy - copies the string pointed to by src, including the terminating
+ * null byte (\0), to the buffer pointed to by dest.
+ * @dest: array to copy to
+ * @src: array to copy from
+ *
+ * Return: the pointer to dest.
+ */
+
+char *_strcpy(char *dest, char *src);
 
 #endif /* _HOLBERTON_H_ */
