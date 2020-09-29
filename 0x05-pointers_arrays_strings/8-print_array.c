@@ -17,5 +17,5 @@ void print_array(int *a, int n)
 		if (x < n + 1)
 			printf(", ");
 	}
-	printf("\");
+	printf("\n");
 }
