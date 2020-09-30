@@ -24,7 +24,6 @@ int _atoi(char *s)
 		if (s[i] >= 48 && s[i] <= 57)
 		{
 			init = i;
-			printf("%d\n", i);
 			break;
 		}
 	}
