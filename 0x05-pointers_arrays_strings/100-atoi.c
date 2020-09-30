@@ -15,9 +15,9 @@ int _atoi(char *s)
 
 	while (s[length] != '\0')
 	{
-		lenght++;
+		length++;
 	}
-	for (i = 0; i < lenght; i++)
+	for (i = 0; i < length; i++)
 	{
 		if (s[i] == '-')
 			sign++;
@@ -28,7 +28,7 @@ int _atoi(char *s)
 			break;
 		}
 	}
-	for (; i < lenght; i++)
+	for (i; i < length; i++)
 	{
 		if (s[i] < 48 || s[i] > 57)
 		{
