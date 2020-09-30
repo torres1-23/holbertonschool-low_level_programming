@@ -10,8 +10,9 @@
 
 int _atoi(char *s)
 {
-	int i = 0, length = 0, sum = 0, sign = 0, num = 0;
-	int init, finish, d;
+	unsigned int i = 0, length = 0, sign = 0;
+	unsigned int init, finish, d, num;
+	int sum;
 
 	while (s[length] != '\0')
 	{
@@ -37,7 +38,7 @@ int _atoi(char *s)
 	finish = i - 1;
 	for (; init <= finish; init++)
 	{
-		num = 0;
+		num = 1;
 		d = s[init] - '0';
 		for (i = 0; i < finish - init ; i++)
 			num = num * 10;
