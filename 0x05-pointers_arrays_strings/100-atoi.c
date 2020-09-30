@@ -14,9 +14,9 @@ int _atoi(char *s)
 	unsigned int init, finish, d, num;
 
 	while (s[length] != '\0')
-	{
 		length++;
-	}
+	if (length == 0)
+		return (0);
 	for (i = 0; i < length; i++)
 	{
 		if (s[i] == '-')
