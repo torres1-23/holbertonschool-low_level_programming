@@ -27,7 +27,7 @@ int _atoi(char *s)
 			break;
 		}
 	}
-	for (i; i < length; i++)
+	for (; i < length; i++)
 	{
 		if (s[i] < 48 || s[i] > 57)
 		{
@@ -35,7 +35,7 @@ int _atoi(char *s)
 		}
 	}
 	finish = i - 1;
-	for (init; init <= finish; init++)
+	for (; init <= finish; init++)
 	{
 		num = 1;
 		d = s[init] - '0';
