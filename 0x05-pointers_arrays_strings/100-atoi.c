@@ -13,15 +13,15 @@ int _atoi(char *s)
 	unsigned int i = 0, length = 0, sum = 0;
 	int init, finish, num, d, sign;
 
-	while (str[length] != '\0')
+	while (s[length] != '\0')
 	{
 		lenght++;
 	}
 	for (i = 0; i < lenght; i++)
 	{
-		if (str[i] == '-')
+		if (s[i] == '-')
 			sign++;
-		if (str[i] >= 48 && str[i] <= 57)
+		if (s[i] >= 48 && str[i] <= 57)
 		{
 			init = i;
 			printf("%d\n", i);
@@ -30,7 +30,7 @@ int _atoi(char *s)
 	}
 	for (; i < lenght; i++)
 	{
-		if (str[i] < 48 || str[i] > 57)
+		if (s[i] < 48 || s[i] > 57)
 		{
 			break;
 		}
@@ -38,7 +38,7 @@ int _atoi(char *s)
 	finish = i - 1;
 	for (init; init <= finish; init++)
 	{
-		d = str[init] - '0';
+		d = s[init] - '0';
 		num = pow(10, finish - init) * d;
 		sum = num + sum;
 	}
