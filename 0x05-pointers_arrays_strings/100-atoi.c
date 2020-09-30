@@ -22,7 +22,7 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 			sign++;
-		if (s[i] >= 48 && str[i] <= 57)
+		if (s[i] >= 48 && s[i] <= 57)
 		{
 			init = i;
 			printf("%d\n", i);
