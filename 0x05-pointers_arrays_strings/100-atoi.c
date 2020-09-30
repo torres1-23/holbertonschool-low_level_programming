@@ -37,7 +37,7 @@ int _atoi(char *s)
 	finish = i - 1;
 	for (; init <= finish; init++)
 	{
-		num = 1;
+		num = 0;
 		d = s[init] - '0';
 		for (i = 0; i < finish - init ; i++)
 			num = num * 10;
