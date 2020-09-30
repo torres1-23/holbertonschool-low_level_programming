@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <math.h>
 #include "holberton.h"
 
 /**
@@ -9,23 +11,39 @@
 
 int _atoi(char *s)
 {
-	unsigned int i = 0;
-	unsigned int length;
-	while (s[i] != '\0')
-		length++;
-	while (s[i] != '\0')
+	int i = 0, length = 0, sum = 0;
+	int init, finish, num, d, sign;
+
+	while (str[length] != '\0')
 	{
-		if (s[i] == '-')
+		lenght++;
+	}
+	for (i = 0; i < lenght; i++)
+	{
+		if (str[i] == '-')
 			sign++;
-		if (s[i] >= '0' && s[i] <= '9')
+		if (str[i] >= 48 && str[i] <= 57)
 		{
 			init = i;
+			printf("%d\n", i);
 			break;
 		}
-		i++;
 	}
-	while (s[init] >= '0' && s[init] <= '9' && s[init] != '\0')
+	for (; i < lenght; i++)
 	{
-		pos = init;
-		numb = s[init];
+		if (str[i] < 48 || str[i] > 57)
+		{
+			break;
+		}
+	}
+	finish = i - 1;
+	for (init; init <= finish; init++)
+	{
+		d = str[init] - '0';
+		num = pow(10, finish - init) * d;
+		sum = num + sum;
+	}
+	if (sign % 2 == 1)
+		sum = -sum;
+	return (sum);
 }
