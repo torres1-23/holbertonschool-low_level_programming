@@ -10,9 +10,8 @@
 
 int _atoi(char *s)
 {
-	unsigned int i = 0, length = 0, sign = 0;
+	unsigned int i = 0, length = 0, sign = 0, sum = 0;
 	unsigned init, finish, d, num;
-	int sum = 0;
 
 	while (s[length] != '\0')
 	{
