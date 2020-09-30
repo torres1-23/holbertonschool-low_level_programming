@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <math.h>
 #include "holberton.h"
 
@@ -11,7 +10,7 @@
 
 int _atoi(char *s)
 {
-	int i = 0, length = 0, sum = 0;
+	unsigned int i = 0, length = 0, sum = 0;
 	int init, finish, num, d, sign;
 
 	while (str[length] != '\0')
