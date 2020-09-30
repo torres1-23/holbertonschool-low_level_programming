@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 #include "holberton.h"
 
 /**
@@ -40,7 +39,9 @@ int _atoi(char *s)
 	for (init; init <= finish; init++)
 	{
 		d = s[init] - '0';
-		num = pow(10, finish - init) * d;
+		for (i = 0; i < finish - init ; i++)
+			num = num * 10;
+		num = num * d;
 		sum = num + sum;
 	}
 	if (sign % 2 == 1)
