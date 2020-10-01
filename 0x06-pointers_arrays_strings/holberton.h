@@ -78,4 +78,13 @@ char *string_toupper(char *a);
 
 char *cap_string(char *a);
 
+/**
+ * leet - encodes a string into 1337
+ * @a: string to encode
+ *
+ * Return: string encoded.
+ */
+
+char *leet(char *a);
+
 #endif /* _HOLBERTON_H_ */
