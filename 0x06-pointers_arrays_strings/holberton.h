@@ -20,10 +20,8 @@ int _putchar(char c);
 
 char *_strcat(char *dest, char *src);
 
-#include "holberton.h"
-
 /**
- * strncat - concatenates two strings
+ * _strncat - concatenates two strings
  * @dest: string to concatenate to
  * @src: string to concatenate from
  * @n: bytes to concatenate
@@ -32,5 +30,26 @@ char *_strcat(char *dest, char *src);
  */
 
 char *_strncat(char *dest, char *src, int n);
+
+/**
+ * _strncopy - copies a string
+ * @dest: string to copy to
+ * @src: string to copy from
+ * @n: bytes to copy
+ *
+ * Return: pointer to the resulting string dest.
+ */
+
+char *_strncpy(char *dest, char *src, int n);
+
+/**
+ * _strcmp - compares two strings
+ * @s1: string to compare
+ * @s2: string to compare
+ *
+ * Return: comparation of strings
+ */
+
+int _strcmp(char *s1, char *s2);
 
 #endif /* _HOLBERTON_H_ */
