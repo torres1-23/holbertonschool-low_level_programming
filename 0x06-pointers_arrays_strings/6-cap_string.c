@@ -30,6 +30,6 @@ char *cap_string(char *a)
 		i++;
 	}
 	if (i == 0)
-		return (0)
+		return (0);
 	return (a);
 }
