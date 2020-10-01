@@ -17,6 +17,8 @@ char *cap_string(char *a)
 
 	while (s[j] != '\0')
 		j++;
+	if (s[0] >= 97 && s[0] <= 122)
+		s[0] = s[0] - 32;
 	while (a[i] != '\0')
 	{
 		for (y = 0; y < j; y++)
