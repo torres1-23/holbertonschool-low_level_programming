@@ -23,7 +23,8 @@ char *cap_string(char *a)
 		{
 			aft = i + 1;
 			if (a[i] == s[y])
-				if (a[aft] >= 97 && a[aft] <= 122)
+				if (a[aft] != '\0' && a[aft] >= 97 &&
+				    a[aft] <= 122)
 					a[aft] = a[aft] - 32;
 		}
 		i++;
