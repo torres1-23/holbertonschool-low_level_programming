@@ -96,4 +96,11 @@ char *leet(char *a);
 
 char *rot13(char *a);
 
+/**
+ * print_number - print a integer with putchar
+ * @n: integer to print
+ */
+
+void print_number(int n);
+
 #endif /* _HOLBERTON_H_ */
