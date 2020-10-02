@@ -21,6 +21,7 @@ char *rot13(char *a)
 			if (a[i] == let[j])
 			{
 				a[i] = cod[j];
+				break;
 			}
 		}
 		i++;
