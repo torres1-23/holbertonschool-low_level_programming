@@ -11,8 +11,8 @@ char *leet(char *a)
 {
 	int j = 0;
 	int i;
-	char let[] = {'a', 'e', 'o', 't', 'l', 'A', 'E', 'O', 'T', 'L', '\0'};
-	char sim[] = {'4', '3', '0', '7', '1', '4', '3', '0', '7', '1', '\0'};
+	char let[] = {"aeotlAEOTL"};
+	char sim[] = {"4307143071"};
 
 	while (a[j] != '\0')
 	{
