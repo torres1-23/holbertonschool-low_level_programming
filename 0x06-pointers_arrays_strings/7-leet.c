@@ -21,6 +21,7 @@ char *leet(char *a)
 			if (a[j] == let[i])
 			{
 				a[j] = sim[i];
+				break;
 			}
 		}
 		j++;
