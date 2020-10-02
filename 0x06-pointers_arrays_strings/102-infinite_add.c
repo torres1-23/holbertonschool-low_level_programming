@@ -12,7 +12,11 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	char a[] = "hola";
+	char *a;
+	int size;
 	
+	n1 = n2;
+	a = r;
+	size = sizer_r;
 	return (a);
 }
