@@ -18,6 +18,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	a = *n1; 
 	b = *n2;
 	a = r;
-	size = size_r;
+	size = size_r + 1;
 	return (a);
 }
