@@ -103,4 +103,24 @@ char *rot13(char *a);
 
 void print_number(int n);
 
+/**
+ * infinite_add -  adds two numbers
+ * @n1: number to add
+ * @n2: number to add
+ * @r: buffer that the function will use to store the result
+ * @size_r: buffer size
+ *
+ * Return: .
+ */
+
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
+
+/**
+ * print_buffer -  prints a buffer.
+ * @b: string to encode.
+ * @size: content of size bytes of the buffer pointed by b
+ */
+
+void print_buffer(char *b, int size);
+
 #endif /* _HOLBERTON_H_ */
