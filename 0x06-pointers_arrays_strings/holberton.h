@@ -87,4 +87,13 @@ char *cap_string(char *a);
 
 char *leet(char *a);
 
+/**
+ * rot13 -  encodes a string using rot13
+ * @a: string to encode
+ *
+ * Return: string encoded.
+ */
+
+char *rot13(char *a);
+
 #endif /* _HOLBERTON_H_ */
