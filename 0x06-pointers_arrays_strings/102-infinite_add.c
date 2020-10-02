@@ -15,7 +15,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	char *a;
 	int size;
 	
-	n1 = n2;
+	*n1 = *n2;
 	a = r;
 	size = size_r;
 	return (a);
