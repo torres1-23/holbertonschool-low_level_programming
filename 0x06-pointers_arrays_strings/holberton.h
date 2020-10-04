@@ -116,6 +116,16 @@ void print_number(int n);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
 
 /**
+ * reverse -  revrse a string
+ * @p: number to add
+ * @r: number to add
+ *
+ * Return: string reversed.
+ */
+
+char *reverse(int p, char *r);
+
+/**
  * print_buffer -  prints a buffer.
  * @b: string to encode.
  * @size: content of size bytes of the buffer pointed by b

@@ -1,19 +1,41 @@
 #include "holberton.h"
 
 /**
+ * reverse -  revrse a string
+ * @p: number to add
+ * @r: number to add
+ *
+ * Return: string reversed.
+ */
+
+char *reverse(int p, char *r)
+{
+	int a, t;
+
+	p = p - 1;
+	for (a = 0; a <= p; a++)
+	{
+		t = r[p];
+		r[p] = r[a];
+		r[a] = t;
+		p--;
+	}
+	return (r);
+}
+
+/**
  * infinite_add -  adds two numbers
  * @n1: number to add
  * @n2: number to add
  * @r: buffer that the function will use to store the result
  * @size_r: buffer size
  *
- * Return: .
+ * Return: the addittion of the two strings
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0, p = 0, desb = 0;
-	int num1, num2, a, t, q, sum, sum1;
+	int i = 0, j = 0, p = 0, desb = 0, num1, num2, a, t, q, sum, sum1;
 
 	while (n1[i] != '\0')
 		i++;
@@ -38,18 +60,13 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		p++;
 	}
 	if (i == j && sum1 >= 10)
-		r[p] = '1';
-	p++;
-	r[p] = '\0';
-	q = p;
-	p = p - 1;
-	for (a = 0; a <= p; a++)
 	{
-		t = r[p];
-		r[p] = r[a];
-		r[a] = t;
-		p--;
+		r[p] = '1';
+		p++;
 	}
+	r[p] = '\0';
+	r = reverse(p, r);
+	q = p;
 	if (size_r > q)
 		return (r);
 	else
