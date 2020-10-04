@@ -35,7 +35,7 @@ char *reverse(int p, char *r)
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0, p = 0, desb = 0, num1, num2, a, t, q, sum, sum1;
+	int i = 0, j = 0, p = 0, desb = 0, num1, num2, q, sum, sum1;
 
 	while (n1[i] != '\0')
 		i++;
