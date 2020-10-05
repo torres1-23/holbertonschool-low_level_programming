@@ -65,4 +65,15 @@ unsigned int _strspn(char *s, char *accept);
 
 char *_strpbrk(char *s, char *accept);
 
+/**
+ * _strstr -  locates a substring.
+ * @haystack: string to analyze.
+ * @needle: string to compare.
+ *
+ * Return: a pointer to the beginning of the located substring, or NULL if
+ * the substring is not found.
+ */
+
+char *_strstr(char *haystack, char *needle);
+
 #endif /* _HOLBERTON_H_ */
