@@ -27,7 +27,7 @@ char *_strstr(char *haystack, char *needle)
 			for (p = 0; word[p]; p++)
 				;
 			if (p == j)
-				return (needle);
+				return (haystack + i);
 		}
 	}
 	return ('\0');
