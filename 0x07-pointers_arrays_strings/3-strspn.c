@@ -23,6 +23,8 @@ unsigned int _strspn(char *s, char *accept)
 				cont++;
 				break;
 			}
+			else
+				break;
 		}
 	}
 	return (cont);
