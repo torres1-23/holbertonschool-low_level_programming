@@ -27,7 +27,7 @@ char *_memset(char *s, char b, unsigned int n);
  * @src: memory area to copy from
  * @n: number of bytes to copy
  *
- * Returns a pointer to dest.
+ * Return: a pointer to dest.
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n);
