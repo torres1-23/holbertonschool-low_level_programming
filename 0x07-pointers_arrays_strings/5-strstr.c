@@ -11,24 +11,14 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, p = 0;
-	char word[1000];
+	int i, j;
 
 	for (i = 0; haystack[i]; i++)
 	{
 		for (j = 0; needle[j] && haystack[i + j] == needle[j]; j++)
-		{
-			word[p] = haystack[i];
-			p++;
-		}
+			;
 		if (j > 0)
-		{
-			word[p] = '\0';
-			for (p = 0; word[p]; p++)
-				;
-			if (p == j)
-				return (haystack + i);
-		}
+			return (haystack + i);
 	}
 	return ('\0');
 }
