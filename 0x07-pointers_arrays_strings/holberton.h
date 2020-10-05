@@ -43,4 +43,15 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 
 char *_strchr(char *s, char c);
 
+/**
+ * _strspn -  gets the length of a prefix substring
+ * @s: string to compare
+ * @accept: bytes to get
+ *
+ * Return: the number of bytes in the initial segment of s which
+ * consist only of bytes from accept
+ */
+
+unsigned int _strspn(char *s, char *accept);
+
 #endif /* _HOLBERTON_H_ */
