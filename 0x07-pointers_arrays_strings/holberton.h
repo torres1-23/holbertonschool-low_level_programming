@@ -37,8 +37,8 @@ char *_memcpy(char *dest, char *src, unsigned int n);
  * @s: memory area to copy to
  * @c: memory area to copy from
  *
- * Return: a pointer to the first occurrence of the character c in the string s,
- * or NULL if the character is not found
+ * Return: a pointer to the first occurrence of the character c in the
+ * string s, or NULL if the character is not found
  */
 
 char *_strchr(char *s, char c);
