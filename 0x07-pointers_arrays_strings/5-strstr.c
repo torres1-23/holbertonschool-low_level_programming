@@ -30,7 +30,7 @@ char *_strstr(char *haystack, char *needle)
 			}
 			j++;
 		}
-		if (j == cont)
+		if (j - pos == cont)
 			return (haystack + pos);
 	}
 	return ('\0');
