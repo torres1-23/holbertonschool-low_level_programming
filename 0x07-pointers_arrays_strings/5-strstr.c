@@ -26,13 +26,13 @@ char *_strstr(char *haystack, char *needle)
 			}
 			for (; i <= j; i++)
 			{
-				if (haystack[i] == needle[j])
+				if (haystack[i] == needle[k])
 				{
 					cont++;
-					j++;
+					k++;
 				}
 			}
-			if (j == cont)
+			if (k == cont)
 				return (haystack + i);
 		}
 	}
