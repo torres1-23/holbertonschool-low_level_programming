@@ -22,13 +22,13 @@ char *_strstr(char *haystack, char *needle)
 				pos = i;
 				break;
 		}
-		for (; needle[j]; i++)
+		for (; needle[j]; j++)
 		{
 			if (haystack[i] == needle[j])
 			{
 				cont++;
 			}
-			j++;
+			i++;
 		}
 		if (j == cont)
 			return (haystack + pos);
