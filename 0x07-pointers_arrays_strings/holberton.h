@@ -92,4 +92,12 @@ void print_chessboard(char (*a)[8]);
 
 void print_diagsums(int *a, int size);
 
+/**
+ * set_string -  sets the value of a pointer to a char.
+ * @s: pointer to set from.
+ * @to: pointer to set to.
+ */
+
+void set_string(char **s, char *to);
+
 #endif /* _HOLBERTON_H_ */
