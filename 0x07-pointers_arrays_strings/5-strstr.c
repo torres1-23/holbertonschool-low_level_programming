@@ -22,7 +22,7 @@ char *_strstr(char *haystack, char *needle)
 				pos = i;
 				break;
 		}
-		for (; needle[j]; j++)
+		for (; i < j; j++)
 		{
 			if (haystack[i] == needle[j])
 			{
@@ -31,7 +31,7 @@ char *_strstr(char *haystack, char *needle)
 			i++;
 		}
 		if (j == cont)
-			return (haystack + i);
+			return (haystack + pos);
 	}
 	return ('\0');
 }
