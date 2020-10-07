@@ -47,7 +47,7 @@ int _pal(char *s, int l)
 		return(1);
 	else if (s[0] == s[l - 1])
 	{
-		_pal(s + 1, l - 2);
+		return (_pal(s + 1, l - 2));
 	}
 	else
 		return (0);
