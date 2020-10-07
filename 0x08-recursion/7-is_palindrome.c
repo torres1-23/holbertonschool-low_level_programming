@@ -43,7 +43,7 @@ int _length(char *s)
 
 int _pal(char *s, int l)
 {
-	else if (s[0] == s[l - 1])
+	if (s[0] == s[l - 1])
 	{
 		return (_pal(s + 1, l - 2));
 	}
