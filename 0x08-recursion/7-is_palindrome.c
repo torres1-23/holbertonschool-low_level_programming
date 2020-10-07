@@ -15,7 +15,7 @@ int is_palindrome(char *s)
 	if (l <= 1)
 		return (1);
 	else
-		return (_pal(s, l - 1));
+		return (_pal(s, l));
 }
 
 /**
@@ -43,11 +43,11 @@ int _length(char *s)
 
 int _pal(char *s, int l)
 {
-	if (l <= 0)
+	if (l <= 1)
 		return (1);
-	else if (s[0] == s[l])
+	else if (s[0] == s[l - 1])
 	{
-		return (_pal(s + 1, l - 1));
+		return (_pal(s + 1, l - 2));
 	}
 	else
 		return (0);
