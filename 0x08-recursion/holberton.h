@@ -34,7 +34,7 @@ void _print_rev_recursion(char *s);
 int _strlen_recursion(char *s);
 
 /**
- * _memset -  returns the factorial of a given number.
+ * factorial -  returns the factorial of a given number.
  * @n: number to calculate its factorial.
  *
  * Return: factorial of n.
@@ -69,13 +69,24 @@ int _sqrt_recursion(int n);
  */
 
 int _sqrt(int n, int i);
+
 /**
- * int is_prime_number -  returns if the input integer is a prime number
+ * is_prime_number -  returns if the input integer is a prime number
  * @n: number to analyze.
  *
  * Return: 1 if the input integer is a prime number, otherwise return 0.
  */
 
 int is_prime_number(int n);
+
+/**
+ * _prime_number -  calcules if n is prime or not.
+ * @n: number to analyze.
+ * @d: divisor.
+ *
+ * Return: 1 if the input integer is a prime number, otherwise return 0.
+ */
+
+int _prime(int n,int d);
 
 #endif /* _HOLBERTON_H_ */
