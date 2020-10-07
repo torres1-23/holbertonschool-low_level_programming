@@ -13,14 +13,14 @@ int is_prime_number(int n)
 }
 
 /**
- * _prime_number -  calcules if n is prime or not.
+ * _prime -  calcules if n is prime or not.
  * @n: number to analyze.
  * @d: divisor.
  *
  * Return: 1 if the input integer is a prime number, otherwise return 0.
  */
 
-int _prime(int n,int d)
+int _prime(int n, int d)
 {
 	if (n <= 1)
 		return (0);
