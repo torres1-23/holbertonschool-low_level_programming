@@ -28,6 +28,8 @@ int is_palindrome(char *s)
 
 int _pal(char *s, int l)
 {
+	if (l <= 1)
+		return(1);
 	if (s[0] == s[l])
 	{
 		_pal(s + 1, l - 1);
