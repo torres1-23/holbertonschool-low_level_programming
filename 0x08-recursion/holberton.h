@@ -102,12 +102,11 @@ int _pal(char *s, int l);
 /**
  * _length - calcules the length of the string
  * @s: string to analyze.
- * @l: length of string.
  *
  * Return: length of string.
  */
 
-int _length(char *s, int l);
+int _length(char *s);
 
 /**
  * is_palindrome - returns if a string is a palindrome
