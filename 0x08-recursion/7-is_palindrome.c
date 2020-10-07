@@ -12,8 +12,13 @@ int _pal(char *s, int l)
 {
 	if (s[0] == s[l])
 	{
-		_pal(s + 1, l - 1);
-		return (1);
+		if (l >= 0)
+		{
+			_pal(s + 1, l - 1);
+			return (1);
+		}
+		else
+			return (0);
 	}
 	else
 		return (0);
