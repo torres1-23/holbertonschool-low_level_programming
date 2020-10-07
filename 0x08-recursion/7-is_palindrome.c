@@ -17,6 +17,8 @@ int _pal(char *s, int l)
 			_pal(s + 1, l - 1);
 			return (1);
 		}
+		else
+			return (0);
 	}
 	else
 		return (0);
