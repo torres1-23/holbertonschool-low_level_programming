@@ -12,10 +12,25 @@ int is_palindrome(char *s)
         int l;
 
         l = _length(s);
-	if (l > 1)
-		return (_pal(s, l - 1));
-	else
+	if (l <= 1)
 		return (1);
+	else
+		return (_pal(s, l));
+}
+
+/**
+ * _length - calcules the length of the string
+ * @s: string to analyze.
+ *
+ * Return: length of string.
+ */
+
+int _length(char *s)
+{
+	if (s[0])
+		return (1 + _length(s + 1));
+	else
+		return (0);
 }
 
 /**
@@ -30,26 +45,10 @@ int _pal(char *s, int l)
 {
 	if (l <= 1)
 		return(1);
-	if (s[0] == s[l])
+	else if (s[0] == s[l - 1])
 	{
-		_pal(s + 1, l - 1);
-		return (1);
+		_pal(s + 1, l - 2);
 	}
-	else
-		return (0);
-}
-
-/**
- * _length - calcules the length of the string
- * @s: string to analyze.
- *
- * Return: length of string.
- */
-
-int _length(char *s)
-{
-	if (s[0])
-		return (1 + _length(s + 1));
 	else
 		return (0);
 }
