@@ -127,4 +127,14 @@ int is_palindrome(char *s);
 
 int wildcmp(char *s1, char *s2);
 
+/**
+ * _wild -  compares special
+ * @s1: string one to compare.
+ * @s2: string two to compare.
+ *
+ * Return: 1 if the strings can be considered identical, otherwise return 0.
+ */
+
+int _wild(char *s1, char *s2);
+
 #endif /* _HOLBERTON_H_ */
