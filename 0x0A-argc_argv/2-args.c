@@ -6,12 +6,15 @@
  * @argc: size of argv.
  * @argv: size of command arguments.
  *
- * Description: prints its name, followed by a new line.
+ * Description: prints all arguments it receives.
  * Return: 0 if succes.
  */
 
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	int i;
+
+	for (i = 0; i < argc; i++)
+		printf("%s\n", argv[i]);
 	return (0);
 }
