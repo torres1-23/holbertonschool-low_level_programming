@@ -14,10 +14,10 @@ char *str_concat(char *s1, char *s2)
 {
 	char *cont;
 	unsigned int i, j;
-	
+
 	while (s1[i])
 		i++;
-	while(s2[j])
+	while (s2[j])
 		j++;
 	cont = malloc((sizeof(cont) * (i + j)) + 1);
 	if (cont == NULL)
