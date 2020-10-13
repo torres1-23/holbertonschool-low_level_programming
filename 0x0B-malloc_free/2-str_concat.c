@@ -14,6 +14,7 @@ char *str_concat(char *s1, char *s2)
 {
 	char *cont;
 	unsigned int i = 0, j = 0;
+	
 	if (s1 != NULL)
 	{
 		while (s1[i])
@@ -34,6 +35,6 @@ char *str_concat(char *s1, char *s2)
 		cont[i] = s2[j];
 		i++;
 	}
-	cont[i + 1] = '\0';
+	cont[i] = '\0';
 	return (cont);
 }
