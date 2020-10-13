@@ -14,11 +14,16 @@ char *str_concat(char *s1, char *s2)
 {
 	char *cont;
 	unsigned int i = 0, j = 0;
-
-	while (s1[i])
-		i++;
-	while (s2[j])
-		j++;
+	if (s1 != NULL)
+	{
+		while (s1[i])
+			i++;
+	}
+	if (s2 != NULL)
+	{
+		while (s2[j])
+			j++;
+	}
 	cont = malloc((sizeof(char) * (i + j)) + 1);
 	if (cont == NULL)
 		return (NULL);
