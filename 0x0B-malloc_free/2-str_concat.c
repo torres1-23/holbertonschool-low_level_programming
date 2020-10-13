@@ -13,13 +13,13 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *cont;
-	unsigned int i, j;
+	unsigned int i = 0, j = 0;
 
 	while (s1[i])
 		i++;
 	while (s2[j])
 		j++;
-	cont = malloc((sizeof(cont) * (i + j)) + 1);
+	cont = malloc((sizeof(char) * (i + j)) + 1);
 	if (cont == NULL)
 		return (NULL);
 	for (i = 0; s1[i]; i++)
