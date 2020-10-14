@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 			j++;
 			l++;
 		}
-		for (j = 0; j < l; j++)
+		for (j = 0; j <= l; j++)
 		{
 			arr[p] = av[i][j];
 			p++;
