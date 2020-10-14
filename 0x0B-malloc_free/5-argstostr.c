@@ -13,7 +13,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *arr;
-	int i, j, , l = 0, p = 0;
+	int i = 0, j, , l = 0, p = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -21,7 +21,10 @@ char *argstostr(int ac, char **av)
 	{
 		j = 0;
 		while (av[i][j])
+		{
 			l++;
+			j++;
+		}
 		i++;
 	}
 	arr = malloc((l * ac) + ac + 1);
