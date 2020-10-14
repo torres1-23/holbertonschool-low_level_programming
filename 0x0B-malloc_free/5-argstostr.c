@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		l = 0;
-		while (av[i][j])
+		while (av[j])
 			l++;
 		for (j = 0; j < l; j++)
 		{
