@@ -17,7 +17,7 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	arr = malloc((1000 * ac) + ac + 1);
+	arr = malloc((10000 * ac) + ac + 1);
 	if (arr == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
