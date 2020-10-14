@@ -13,7 +13,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *arr;
-	int i, j = 0, l, p = 0;
+	int i, j, p = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -22,10 +22,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		l = 0;
-		while (av[j])
-			l++;
-		for (j = 0; j < l; j++)
+		for (j = 0; av[i - 1][j]; j++)
 		{
 			arr[p] = av[i][j];
 			p++;
