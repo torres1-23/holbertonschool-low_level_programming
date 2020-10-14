@@ -13,11 +13,18 @@
 char *argstostr(int ac, char **av)
 {
 	char *arr;
-	int i, j, p = 0;
+	int i, j, , l = 0, p = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	arr = malloc((100000 * ac) + ac + 1);
+	while (av[i])
+	{
+		j = 0;
+		while (av[i][j])
+			l++;
+		i++;
+	}
+	arr = malloc((l * ac) + ac + 1);
 	if (arr == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
