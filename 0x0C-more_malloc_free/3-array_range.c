@@ -14,7 +14,7 @@
 int *array_range(int min, int max)
 {
 	int *mem;
-	unsigned int size;
+	unsigned int size, i;
 
 	if (min > max)
 		return (NULL);
@@ -22,7 +22,7 @@ int *array_range(int min, int max)
 	mem = malloc(sizeof(int) * size);
 	if (mem == NULL)
 		return (NULL);
-	for (; min < max; min++)
-		mem[min] = min;
+	for (i = 0; min <= max; i++)
+		mem[i] = min++;
 	return (mem);
 }
