@@ -8,7 +8,7 @@
  * Return: 0 if succes.
  */
 
-int main ()
+int main(void)
 {
 	return (0);
 }
