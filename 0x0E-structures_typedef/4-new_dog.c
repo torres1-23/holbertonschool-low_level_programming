@@ -37,18 +37,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		ow[j] = owner[j];
 	ow[j] = '\0';
 	nd->name = nm;
-	if (nd->name == NULL)
-	{
-		free(nd);
-		return (0);
-	}
 	nd->age = age;
 	nd->owner = ow;
-	if (nd->owner == NULL)
-	{
-		free(nd);
-		free(nd->name);
-		return (0);
-	}
 	return (nd);
 }
