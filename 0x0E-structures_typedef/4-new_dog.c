@@ -39,5 +39,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	nd->name = nm;
 	nd->age = age;
 	nd->owner = ow;
+	free (nm);
+	free (ow);
 	return (nd);
 }
