@@ -9,7 +9,7 @@
  * Return: 0 on success
  **/
 
-int main(int argc, *argv[])
+int main(int argc, char *argv[])
 {
 	if (argc != 2)
 	{
