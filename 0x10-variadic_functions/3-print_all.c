@@ -71,7 +71,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == types[j].tp)
 			{
-				printf("%s", spc);
+				printf("%s", s);
 				types[j].f(alist);
 				s = ", ";
 			}
