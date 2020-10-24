@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 	};
 	va_list alist;
 	char *spc = "";
-	unsigned int i = 0, j = 0;
+	unsigned int i = 0, j;
 
 	va_start(alist, format);
 	while (format[i] && format)
