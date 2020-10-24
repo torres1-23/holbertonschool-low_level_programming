@@ -66,7 +66,7 @@ void print_all(const char * const format, ...)
 	va_start(alist, format);
 	while (format[i] != '\0' && format != NULL)
 	{
-		while (_types[j].tp)
+		while (_types[j].tp !0 '\0')
 		{
 			if (format[i] == _types[j].tp)
 			{
