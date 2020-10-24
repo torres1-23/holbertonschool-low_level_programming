@@ -13,7 +13,7 @@
 
 typedef struct _type
 {
-	char *tp;
+	char tp;
 	void (*f)(va_list a);
 } _type_t;
 int sum_them_all(const unsigned int n, ...);
