@@ -55,7 +55,7 @@ void p_char(va_list a)
 
 void p_int(va_list a)
 {
-	printf("%d", va_arg(a, int));
+	printf("%i", va_arg(a, int));
 }
 
 /**
