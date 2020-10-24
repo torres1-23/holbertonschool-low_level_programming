@@ -12,11 +12,10 @@ void print_all(const char * const format, ...)
 		{"i", p_int},
 		{"f", p_float},
 		{"s", p_string},
-		{NULL, NULL}
 	};
 	va_list alist;
 	char *spc = "";
-	unsigned int i = 0, j;
+	int i = 0, j;
 
 	va_start(alist, format);
 	while (format[i] && format)
