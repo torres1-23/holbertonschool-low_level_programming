@@ -4,21 +4,21 @@ void print_all(const char * const format, ...)
 {
 	va_list alist;
 	type_t types[] = {
-		{'c', p_char},
-		{'i', p_int},
-		{'f', p_float},
-		{'s', p_string},
-		{'\0', '\0'}
+		{"c", p_char},
+		{"i", p_int},
+		{"f", p_float},
+		{"s", p_string},
+		{NULL, NULL}
 	};
 	int i = 0, j = 0;
-	char *s = "";
+	char *str = "";
 
 	va_start(alist, format);
-	while (format != NULL && format[i] != '\0')
+	while (format && format[i])
 	{
-		while (types[j].tp != '\0')
+		while (types[j].tp)
 		{
-			if (format[i] == types[j].tp)
+			if (format[i] == *types[j].tp)
 			{
 				printf("%s", s);
 				types[j].f(alist);
@@ -32,7 +32,6 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	va_end(alist);
 }
-
 
 /**
  * p_char - prints a character
