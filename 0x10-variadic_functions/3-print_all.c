@@ -1,5 +1,10 @@
 #include "variadic_functions.h"
 
+/**
+ * print_all - prints anything.
+ * @format: list of types of arguments passed to the function
+ */
+
 void print_all(const char * const format, ...)
 {
 	va_list alist;
@@ -77,8 +82,3 @@ void p_string(va_list a)
 		str = "(nil)";
 	printf("%s", str);
 }
-
-/**
- * print_all - prints anything.
- * @format: list of types of arguments passed to the function
- */
