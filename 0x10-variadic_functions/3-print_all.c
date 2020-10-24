@@ -39,7 +39,7 @@ void p_string(va_list a)
 {
 	char *str;
 
-	str =  va_arg(a, char *);
+	str = va_arg(a, char *);
 	if (str == NULL)
 		str = "(nil)";
 	printf("%s", str);
@@ -60,7 +60,7 @@ void print_all(const char * const format, ...)
 		{'\0', '\0'}
 	};
 	va_list alist;
-	char *spc = "";
+	char *s = "";
 	int i = 0, j = 0;
 
 	va_start(alist, format);
@@ -73,7 +73,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", spc);
 				types[j].f(alist);
-				spc = ", ";
+				s = ", ";
 			}
 			j++;
 		}
