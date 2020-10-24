@@ -22,7 +22,7 @@ void print_all(const char * const format, ...)
 	while (format[i] && format)
 	{
 		j = 0;
-		while (j < 4)
+		while (_types[j].tp)
 		{
 			if (format[i] == *_types[j].tp)
 			{
@@ -75,7 +75,7 @@ void p_float(va_list a)
 
 void p_string(va_list a)
 {
-	char *str = va_arg(a, char *);
+	char *str = va_arg(a, char*);
 
 	if (str == NULL)
 		str = "(nil)";
