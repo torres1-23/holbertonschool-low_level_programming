@@ -1,44 +1,6 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - prints anything.
- * @format: list of types of arguments passed to the function
- */
-
-void print_all(const char * const format, ...)
-{
-	type_t types[] = {
-		{'c', p_char},
-		{'i', p_int},
-		{'f', p_float},
-		{'s', p_string},
-		{'\0', '\0'}
-	};
-	va_list alist;
-	char *spc = "";
-	int i = 0, j = 0;
-
-	va_start(alist, format);
-	while (format[i] && format)
-	{
-		j = 0;
-		while (types[j].tp)
-		{
-			if (format[i] == types[j].tp)
-			{
-				printf("%s", spc);
-				types[j].f(alist);
-				spc = ", ";
-			}
-			j++;
-		}
-		i++;
-	}
-	printf("\n");
-	va_end(alist);
-}
-
-/**
  * p_char - prints a character
  * @a: character to be printed
  */
@@ -80,4 +42,42 @@ void p_string(va_list a)
 	if (str == NULL)
 		str = "(nil)";
 	printf("%s", str);
+}
+
+/**
+ * print_all - prints anything.
+ * @format: list of types of arguments passed to the function
+ */
+
+void print_all(const char * const format, ...)
+{
+	type_t types[] = {
+		{'c', p_char},
+		{'i', p_int},
+		{'f', p_float},
+		{'s', p_string},
+		{'\0', '\0'}
+	};
+	va_list alist;
+	char *spc = "";
+	int i = 0, j = 0;
+
+	va_start(alist, format);
+	while (format[i] && format)
+	{
+		j = 0;
+		while (types[j].tp)
+		{
+			if (format[i] == types[j].tp)
+			{
+				printf("%s", spc);
+				types[j].f(alist);
+				spc = ", ";
+			}
+			j++;
+		}
+		i++;
+	}
+	printf("\n");
+	va_end(alist);
 }
