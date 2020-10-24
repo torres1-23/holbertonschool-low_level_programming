@@ -16,11 +16,12 @@ void print_all(const char * const format, ...)
 	};
 	va_list alist;
 	char *spc = "";
-	int i = 0, j = 0;
+	int i = 0, j;
 
 	va_start(alist, format);
 	while (format[i] && format)
 	{
+		j = 0;
 		while (_types[j].tp)
 		{
 			if (format[i] == *_types[j].tp)
@@ -32,7 +33,6 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		i++;
-		j = 0;
 	}
 	printf("\n");
 	va_end(alist);
@@ -55,7 +55,7 @@ void p_char(va_list a)
 
 void p_int(va_list a)
 {
-	printf("%d", va_arg(a, int));
+	printf("%i", va_arg(a, int));
 }
 
 /**
@@ -75,7 +75,7 @@ void p_float(va_list a)
 
 void p_string(va_list a)
 {
-	char *str = va_arg(a, char*);
+	char *str = va_arg(a, char *);
 
 	if (str == NULL)
 		str = "(nil)";
