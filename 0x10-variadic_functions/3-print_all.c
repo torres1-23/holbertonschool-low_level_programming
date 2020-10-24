@@ -20,9 +20,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *types[j].tp)
 			{
-				printf("%s", s);
+				printf("%s", str);
 				types[j].f(alist);
-				s = ", ";
+				str = ", ";
 			}
 			j++;
 		}
