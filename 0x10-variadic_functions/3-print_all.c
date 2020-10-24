@@ -52,6 +52,7 @@ void p_string(va_list a)
 
 void print_all(const char * const format, ...)
 {
+	va_list alist;
 	type_t types[] = {
 		{'c', p_char},
 		{'i', p_int},
@@ -59,15 +60,13 @@ void print_all(const char * const format, ...)
 		{'s', p_string},
 		{'\0', '\0'}
 	};
-	va_list alist;
-	char *s = "";
 	int i = 0, j = 0;
+	char *s = "";
 
 	va_start(alist, format);
-	while (format[i] && format)
+	while (format != NULL && format[i] != '\0')
 	{
-		j = 0;
-		while (types[j].tp)
+		while (types[j].tp != '\0')
 		{
 			if (format[i] == types[j].tp)
 			{
@@ -77,6 +76,7 @@ void print_all(const char * const format, ...)
 			}
 			j++;
 		}
+		j = 0;
 		i++;
 	}
 	printf("\n");
