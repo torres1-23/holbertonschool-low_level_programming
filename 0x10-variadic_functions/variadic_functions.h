@@ -26,4 +26,4 @@ void p_int(va_list a);
 void p_float(va_list a);
 void p_string(va_list a);
 
-#endif /* _VARIADIC_FUNCTIONS_H_ */
+#endif /* _VARIADIC_H_ */
