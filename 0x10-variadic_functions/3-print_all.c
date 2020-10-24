@@ -19,7 +19,7 @@ void print_all(const char * const format, ...)
 	int i = 0, j;
 
 	va_start(alist, format);
-	while (format[i])
+	while (format[i] && format)
 	{
 		j = 0;
 		while (_types[j].tp)
