@@ -22,7 +22,7 @@ void print_all(const char * const format, ...)
 	while (format[i] && format)
 	{
 		j = 0;
-		while (_types[j].tp)
+		while (j < 4)
 		{
 			if (format[i] == *_types[j].tp)
 			{
@@ -55,7 +55,7 @@ void p_char(va_list a)
 
 void p_int(va_list a)
 {
-	printf("%i", va_arg(a, int));
+	printf("%d", va_arg(a, int));
 }
 
 /**
