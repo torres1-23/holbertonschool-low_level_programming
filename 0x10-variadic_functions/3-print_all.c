@@ -8,10 +8,11 @@
 void print_all(const char * const format, ...)
 {
 	_type_t _types[] = {
-		{"c", p_char},
-		{"i", p_int},
-		{"f", p_float},
-		{"s", p_string},
+		{'c', p_char},
+		{'i', p_int},
+		{'f', p_float},
+		{'s', p_string},
+		{'\0', '\0'}
 	};
 	va_list alist;
 	char *spc = "";
@@ -21,9 +22,9 @@ void print_all(const char * const format, ...)
 	while (format[i] && format)
 	{
 		j = 0;
-		while (j < 4)
+		while (_types[j].op)
 		{
-			if (format[i] == _types[j].tp[0])
+			if (format[i] == *_types[j].tp)
 			{
 				printf("%s", spc);
 				_types[j].f(alist);
