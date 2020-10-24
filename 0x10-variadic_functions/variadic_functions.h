@@ -11,15 +11,15 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
 /**
- * struct format_s - structure for types.
+ * struct _type - structure for types.
  * @tp: string type of character.
  * @f: pointer to function that prints.
  */
 
-typedef struct format_s
+typedef struct _type
 {
-	char type;
-	void (*f)();
-} format_t;
+	char tp;
+	void (*f)(va_list);
+} _type_t;
 
 #endif /* _VARIADIC_FUNCTIONS_H_ */
