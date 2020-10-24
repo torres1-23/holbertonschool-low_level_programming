@@ -1,4 +1,5 @@
 	global main
+	
 	section .text
 main:	mov rax, 1
 	mov rdi, 1
@@ -6,7 +7,7 @@ main:	mov rax, 1
 	mov rdx, 17
 	syscall
 	mov rax, 60
-	mov rdi, 0
+	xor rdi, rdi
 	syscall
 
 	section .data
