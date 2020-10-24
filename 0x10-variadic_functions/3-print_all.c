@@ -79,6 +79,5 @@ void p_string(va_list a)
 
 	if (str == NULL)
 		printf("(nil)");
-	else
-		printf("%s", str);
+	printf("%s", str);
 }
