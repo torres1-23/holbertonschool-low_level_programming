@@ -75,7 +75,7 @@ void p_float(va_list a)
 
 void p_string(va_list a)
 {
-	char *str = va_arg(a, char*);
+	char *str = va_arg(a, char *);
 
 	if (str == NULL)
 		str = "(nil)";
