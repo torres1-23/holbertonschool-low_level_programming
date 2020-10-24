@@ -16,10 +16,10 @@ void print_all(const char * const format, ...);
  * @f: pointer to function that prints.
  */
 
-typedef struct _type
+typedef struct types
 {
 	char tp;
-	void (*f)(va_list);
-} _type_t;
+	void (*f)();
+} type_t;
 
 #endif /* _VARIADIC_FUNCTIONS_H_ */
