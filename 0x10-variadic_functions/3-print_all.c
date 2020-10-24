@@ -24,7 +24,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (_types[j].tp)
 		{
-			if (format[i] == *_types[j].tp)
+			if (format[i] == *(_types[j].tp))
 			{
 				printf("%s", spc);
 				_types[j].f(alist);
