@@ -1,78 +1,84 @@
 #include "variadic_functions.h"
 
 /**
- * p_char - prints a character
- * @a: character to be printed
+ * printf_char - Print a char.
+ * @a: Argument to print.
+ *
+ * Return: Nothing.
  */
-
-void p_char(va_list a)
+void printf_char(va_list a)
 {
 	printf("%c", va_arg(a, int));
 }
 
 /**
- * p_int - prints a character.
- * @a: character to be printed
+ * printf_int - Print a int.
+ * @a: Argument to print.
+ *
+ * Return: Nothing.
  */
-
-void p_int(va_list a)
+void printf_int(va_list a)
 {
-	printf("%i", va_arg(a, int));
+	printf("%d", va_arg(a, int));
 }
 
 /**
- * p_float - prints a character.
- * @a: character to be printed
+ * printf_float - Print a float.
+ * @a: Argument to print.
+ *
+ * Return: Nothing.
  */
-
-void p_float(va_list a)
+void printf_float(va_list a)
 {
 	printf("%f", va_arg(a, double));
 }
 
 /**
- * p_string - prints a character.
- * @a: character to be printed
+ * printf_string - Print a string.
+ * @a: Argument to print.
+ *
+ * Return: Nothing.
  */
-
-void p_string(va_list a)
+void printf_string(va_list a)
 {
-	char *str;
+	char *s;
 
-	str = va_arg(a, char *);
-	if (str == NULL)
-		str = "(nil)";
-	printf("%s", str);
+	s = va_arg(a, char *);
+	if (s == NULL)
+		s = "(nil)";
+	printf("%s", s);
 }
 
 /**
- * print_all - prints anything.
- * @format: list of types of arguments passed to the function
+ * print_all - Print anything.
+ * @format: string with the types to print
+ *
+ * Return: Nothing.
  */
-
 void print_all(const char * const format, ...)
 {
-	va_list alist;
-	_type_t _types[] = {
-		{'c', p_char},
-		{'i', p_int},
-		{'f', p_float},
-		{'s', p_string},
+	va_list p_list;
+	format_t p_type[] = {
+		{'c', printf_char},
+		{'i', printf_int},
+		{'f', printf_float},
+		{'s', printf_string},
 		{'\0', '\0'}
 	};
-	unsigned int i = 0, j = 0;
-	char *spc = "";
+	unsigned int i = 0;
+	unsigned int j = 0;
+	char *s = "";
 
-	va_start(alist, format);
-	while (format[i] != '\0' && format != NULL)
+	va_start(p_list, format);
+	while (format != NULL && format[i] != '\0')
 	{
-		while (_types[j].tp != '\0')
+		while (p_type[j].type != '\0')
 		{
-			if (format[i] == _types[j].tp)
+			if (format[i] == p_type[j].type)
 			{
-				printf("%s", spc);
-				_types[j].f(alist);
-				spc = ", ";
+				printf("%s", s);
+				p_type[j].f(p_list);
+				s = ", ";
 			}
 			j++;
 		}
@@ -80,5 +86,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-	va_end(alist);
+	va_end(p_list);
 }
