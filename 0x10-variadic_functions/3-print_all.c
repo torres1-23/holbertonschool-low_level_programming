@@ -1,90 +1,83 @@
 #include "variadic_functions.h"
 
 /**
- * printf_char - Print a char.
- * @a: Argument to print.
- *
- * Return: Nothing.
+ * print_all - prints anything.
+ * @format: list of types of arguments passed to the function
  */
-void printf_char(va_list a)
+
+void print_all(const char * const format, ...)
+{
+	_type_t _types[] = {
+		{'c', p_char},
+		{'i', p_int},
+		{'f', p_float},
+		{'s', p_string},
+		{'\0', '\0'}
+	};
+	va_list alist;
+	char *spc = "";
+	int i = 0, j;
+
+	va_start(alist, format);
+	while (format[i] && format)
+	{
+		j = 0;
+		while (_types[j].tp)
+		{
+			if (format[i] == _types[j].tp)
+			{
+				printf("%s", spc);
+				_types[j].f(alist);
+				spc = ", ";
+			}
+			j++;
+		}
+		i++;
+	}
+	printf("\n");
+	va_end(alist);
+}
+
+/**
+ * p_char - prints a character
+ * @a: character to be printed
+ */
+
+void p_char(va_list a)
 {
 	printf("%c", va_arg(a, int));
 }
 
 /**
- * printf_int - Print a int.
- * @a: Argument to print.
- *
- * Return: Nothing.
+ * p_int - prints a character.
+ * @a: character to be printed
  */
-void printf_int(va_list a)
+
+void p_int(va_list a)
 {
-	printf("%d", va_arg(a, int));
+	printf("%i", va_arg(a, int));
 }
 
 /**
- * printf_float - Print a float.
- * @a: Argument to print.
- *
- * Return: Nothing.
+ * p_float - prints a character.
+ * @a: character to be printed
  */
-void printf_float(va_list a)
+
+void p_float(va_list a)
 {
 	printf("%f", va_arg(a, double));
 }
 
 /**
- * printf_string - Print a string.
- * @a: Argument to print.
- *
- * Return: Nothing.
+ * p_string - prints a character.
+ * @a: character to be printed
  */
-void printf_string(va_list a)
+
+void p_string(va_list a)
 {
-	char *s;
+	char *str = va_arg(a, char *);
 
-	s = va_arg(a, char *);
-	if (s == NULL)
-		s = "(nil)";
-	printf("%s", s);
-}
-
-/**
- * print_all - Print anything.
- * @format: string with the types to print
- *
- * Return: Nothing.
- */
-void print_all(const char * const format, ...)
-{
-	va_list p_list;
-	format_t p_type[] = {
-		{'c', printf_char},
-		{'i', printf_int},
-		{'f', printf_float},
-		{'s', printf_string},
-		{'\0', '\0'}
-	};
-	unsigned int i = 0;
-	unsigned int j = 0;
-	char *s = "";
-
-	va_start(p_list, format);
-	while (format != NULL && format[i] != '\0')
-	{
-		while (p_type[j].type != '\0')
-		{
-			if (format[i] == p_type[j].type)
-			{
-				printf("%s", s);
-				p_type[j].f(p_list);
-				s = ", ";
-			}
-			j++;
-		}
-		j = 0;
-		i++;
-	}
-	printf("\n");
-	va_end(p_list);
+	if (str == NULL)
+		str = "(nil)";
+	printf("%s", str);
 }
