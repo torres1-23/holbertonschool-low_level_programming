@@ -11,12 +11,12 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
 /**
- * struct _type - structure for types.
+ * struct type - structure for types.
  * @tp: string type of character.
  * @f: pointer to function that prints.
  */
 
-typedef struct types
+typedef struct type
 {
 	char tp;
 	void (*f)();
