@@ -7,6 +7,7 @@
 
 void print_all(const char * const format, ...)
 {
+	va_list alist;
 	_type_t _types[] = {
 		{'c', p_char},
 		{'i', p_int},
@@ -14,7 +15,6 @@ void print_all(const char * const format, ...)
 		{'s', p_string},
 		{'\0', '\0'}
 	};
-	va_list alist;
 	char *spc = "";
 	int i = 0, j;
 
