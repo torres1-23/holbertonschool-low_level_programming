@@ -78,6 +78,6 @@ void p_string(va_list a)
 	char *str = va_arg(a, char*);
 
 	if (str == NULL)
-		printf("(nil)");
+		str = "(nil)";
 	printf("%s", str);
 }
