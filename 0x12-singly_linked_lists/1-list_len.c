@@ -9,7 +9,7 @@
 
 size_t list_len(const list_t *h)
 {
-	unsigned int i;
+	int i;
 
 	if (!h)
 		return (0);
