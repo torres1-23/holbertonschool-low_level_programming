@@ -1,4 +1,6 @@
-#include "lists.h"
+#include <stdlib.h>
+
+void beforemain(void) __attribute__ ((constructor));
 
 /**
  * beforemain - prints something before the main function.
