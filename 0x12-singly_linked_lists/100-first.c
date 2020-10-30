@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdio.h>
 
 void beforemain(void) __attribute__ ((constructor));
 
