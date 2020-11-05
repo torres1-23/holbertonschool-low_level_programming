@@ -16,14 +16,17 @@ unsigned int binary_to_uint(const char *b)
 	{
 		while (b[len])
 			len++;
-		dec += b[i] - '0';
-		for (i = 1; i < len; i++)
+		if (len <= 32)
 		{
-			if (b[i] < '0' || b[i] > '1')
-				return (0);
-			dec = (dec * 2) + (b[i] - '0');
+			dec += b[i] - '0';
+			for (i = 1; i < len; i++)
+			{
+				if (b[i] < '0' || b[i] > '1')
+					return (0);
+				dec = (dec * 2) + (b[i] - '0');
+			}
+			return (dec);
 		}
-		return (dec);
 	}
 	return (0);
 }
