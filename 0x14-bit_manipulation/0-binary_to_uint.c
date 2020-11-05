@@ -16,7 +16,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		while (b[len])
 			len++;
-		if (len <= 32)
+		if (len <= 31)
 		{
 			dec += b[i] - '0';
 			for (i = 1; i < len; i++)
