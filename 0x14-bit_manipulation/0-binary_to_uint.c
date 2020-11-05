@@ -12,18 +12,20 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int dec = 0, i = 0, len = 0;
 
-	if (b == '\0' || b == "" || !b)
-		return (0);
-	while (b[len])
+	if (b)
 	{
-		if (b[len] < '0' || b[len] > '1')
-			return (0);
-		len++;
+		while (b[len])
+		{
+			if (b[len] < '0' || b[len] > '1')
+				return (0);
+			len++;
+		}
+		dec += b[i] - '0';
+		for (i = 1; i < len; i++)
+		{
+			dec = (dec * 2) + (b[i] - '0');
+		}
+		return (dec);
 	}
-	dec += b[i] - '0';
-	for (i = 1; i < len; i++)
-	{
-		dec = (dec * 2) + (b[i] - '0');
-	}
-	return (dec);
+	return (0);
 }
