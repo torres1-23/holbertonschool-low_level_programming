@@ -12,16 +12,19 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int i;
 
-	for (i = 0; i < index; i++)
+	if (index < 31)
 	{
-		n = n >> 1;
-	}
-	if (n)
-	{
-		if (n & 1)
-			return (1);
-		else
-			return (0);
+		for (i = 0; i < index; i++)
+		{
+			n = n >> 1;
+		}
+		if (n)
+		{
+			if (n & 1)
+				return (1);
+			else
+				return (0);
+		}
 	}
 	return (-1);
 }
