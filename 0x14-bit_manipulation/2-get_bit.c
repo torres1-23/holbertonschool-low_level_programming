@@ -12,7 +12,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int i;
 
-	if (index < 31)
+	if (index < 32)
 	{
 		for (i = 0; i < index; i++)
 		{
