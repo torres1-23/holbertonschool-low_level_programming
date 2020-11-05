@@ -22,9 +22,7 @@ unsigned int binary_to_uint(const char *b)
 		}
 		dec += b[i] - '0';
 		for (i = 1; i < len; i++)
-		{
 			dec = (dec * 2) + (b[i] - '0');
-		}
 		return (dec);
 	}
 	return (0);
