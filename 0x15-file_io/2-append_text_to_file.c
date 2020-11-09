@@ -10,8 +10,7 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int file, len = 0;
-	ssize_t byteswrt;
+	int file, len = 0, byteswrt;;
 
 	if (filename)
 	{
@@ -26,7 +25,6 @@ int append_text_to_file(const char *filename, char *text_content)
 			if (byteswrt == -1)
 				return (-1);
 		}
-		
 		close(file);
 		return (1);
 	}
