@@ -29,10 +29,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			return (0);
 		bytesrd = read(file, text, letters);
 		if (bytesrd == -1)
+		{
+			free(text);
 			return (0);
+		}
 		byteswrt = write(STDIN_FILENO, text, bytesrd);
 		if (byteswrt == -1)
+		{
 			return (0);
+			free(text);
+		}
 		close(file);
 		free(text);
 		return (byteswrt);
