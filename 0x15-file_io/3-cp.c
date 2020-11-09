@@ -10,7 +10,7 @@
 
 int main(int ac, char *av[])
 {
-	int ffrom, fto, bytesrd = 1, byteswr, tmp;
+	int ffrom, fto, bytesrd, byteswr, tmp;
 	char *buffer;
 
 	err_argc(ac);
@@ -21,9 +21,8 @@ int main(int ac, char *av[])
 	buffer = malloc(1024);
 	if (!buffer)
 		return (-1);
-	while (bytesrd != 0)
+	while (bytesrd = read(ffrom, buffer, 1024))
 	{
-		bytesrd = read(ffrom, buffer, 1024);
 		err_read(bytesrd, av[1], buffer);
 		byteswr = write(fto, buffer, bytesrd);
 		err_wr(byteswr, av[2], buffer);
