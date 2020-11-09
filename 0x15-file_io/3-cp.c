@@ -45,7 +45,7 @@ int main(int ac, char *av[])
 
 /**
  * err_argc - Handles number of arguments error.
- * @code: code of error.
+ * @args: code of error.
  */
 
 void err_argc(int args)
