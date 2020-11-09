@@ -32,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			free(text);
 			return (0);
 		}
-		byteswrt = write(STDIN_FILENO, text, bytesrd);
+		byteswrt = write(STDOUT_FILENO, text, bytesrd);
 		if (byteswrt == -1)
 		{
 			free(text);
