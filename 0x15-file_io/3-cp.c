@@ -48,9 +48,9 @@ int main(int ac, char *av[])
  * @code: code of error.
  */
 
-void err_argc(int code)
+void err_argc(int args)
 {
-	if (code == -1)
+	if (args != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
