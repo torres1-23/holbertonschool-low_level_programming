@@ -10,8 +10,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int len = 0, file;
-	ssize_t byteswrt;
+	int len = 0, file, byteswrt;
 
 	if (filename)
 	{
