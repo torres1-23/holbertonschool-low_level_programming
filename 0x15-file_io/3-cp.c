@@ -94,7 +94,7 @@ void err_wr(int code, char *str, char *buffer)
 /**
  * err_close - handles close error.
  * @code: error code.
- * @str: File name.
+ * @fd: File descriptor.
  * @buffer: buffer to free.
  */
 
