@@ -12,7 +12,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int len = 0, file, byteswrt;
 
-	if (filename != 0)
+	if (*filename)
 	{
 		while (text_content[len])
 			len++;
