@@ -21,7 +21,7 @@ int main(int ac, char *av[])
 	buffer = malloc(1024);
 	if (!buffer)
 		return (-1);
-	while (bytesrd = read(ffrom, buffer, 1024))
+	while ((bytesrd = read(ffrom, buffer, 1024)) != 0)
 	{
 		err_read(bytesrd, av[1], buffer);
 		byteswr = write(fto, buffer, bytesrd);
