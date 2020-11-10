@@ -101,7 +101,7 @@ void err_close(int code, int fd, char *buffer)
 	if (code == -1)
 	{
 		free(buffer);
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
