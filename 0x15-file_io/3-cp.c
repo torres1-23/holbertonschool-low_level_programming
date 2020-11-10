@@ -18,7 +18,7 @@ int main(int ac, char *av[])
 	err_read(ffrom, av[1], NULL);
 	fto = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 436);
 	err_wr(fto, av[2], NULL);
-	buffer = malloc(1024);
+	buffer = malloc(sizeof(char) * 1024);
 	if (!buffer)
 		return (-1);
 	while ((bytesrd = read(ffrom, buffer, 1024)) != 0)
