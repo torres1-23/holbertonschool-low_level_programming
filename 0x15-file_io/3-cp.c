@@ -26,13 +26,6 @@ int main(int ac, char *av[])
 		err_read(bytesrd, av[1], buffer);
 		byteswr = write(fto, buffer, bytesrd);
 		err_wr(byteswr, av[2], buffer);
-		if (byteswr == 1024)
-		{
-			free(buffer);
-			buffer = malloc(1024);
-			if (!buffer)
-				return (-1);
-		}
 	}
 	tmp = close(ffrom);
 	err_close(tmp, ffrom, buffer);
