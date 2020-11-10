@@ -15,7 +15,7 @@ int main(int ac, char *av[])
 
 	err_argc(ac);
 	ffrom = open(av[1], O_RDONLY);
-	err_read(ffrom, av[1], NULL);
+	err_read(ffrom, av[1]);
 	fto = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 436);
 	err_wr(fto, av[2], NULL);
 	buffer = malloc(1024);
@@ -23,7 +23,7 @@ int main(int ac, char *av[])
 		return (-1);
 	while ((bytesrd = read(ffrom, buffer, 1024)) != 0)
 	{
-		err_read(bytesrd, av[1], buffer);
+		err_read(bytesrd, av[1]);
 		byteswr = write(fto, buffer, bytesrd);
 		err_wr(byteswr, av[2], buffer);
 		if (byteswr == 1024)
@@ -63,11 +63,10 @@ void err_argc(int args)
  * @buffer: Buffer to free.
  */
 
-void err_read(int code, char *str, char *buffer)
+void err_read(int code, char *str)
 {
 	if (code == -1)
 	{
-		free(buffer);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", str);
 		exit(98);
 	}
