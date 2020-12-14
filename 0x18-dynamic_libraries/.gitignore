@@ -4,3 +4,4 @@
 *.out
 *.o
 liball.so
+*.py
