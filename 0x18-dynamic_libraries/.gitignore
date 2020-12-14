@@ -1,0 +1,6 @@
+# ignore these files
+*~
+*.c
+*.out
+*.o
+liball.a
